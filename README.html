@@ -1,0 +1,92 @@
+<html>
+<head>
+<title></title>
+<meta name="generator" content="md2html">
+</head>
+<body>
+<h1>orderbird Senior Frontend Tech Challenge</h1>
+<p>Hey Front End developer. Welcome. Your mission, should you decide to accept
+it, is to carve out 3 hours and create a SPA using <a href="https://laravel.com/">Laravel</a>, <a href="https://tailwindcss.com/">Tailwind</a>,
+and your JavaScript library of preference.</p>
+<p>The objective of the challenge is to display a table of users. It has to be
+sortable (both asc. and desc.) by first name, last name, and email address.</p>
+<p>The table on the view must be responsive: it should be centered vertically and
+horizontally on desktop and tablet, with a max. width of <code>768px</code>, but occupy
+the entire screen on mobile devices. Allow horizontal scroll to prevent
+breaking the rows only when necessary.</p>
+<h2>Desired outcome</h2>
+<ul>
+<li>It must be a Single Page Application</li>
+<li>Do not use jQuery</li>
+<li>Go all the way with the latest ECMAScript specs (you'll possibly need to
+update <code>webpack</code> config)</li>
+<li>Include tests (at least unit tests)</li>
+<li>Modularize whenever possible, avoid creating files with hundred of lines</li>
+<li>Your submission for this challenge runs without errors nor warnings</li>
+</ul>
+<h2>Important!</h2>
+<p>We hope you can spend about three hours on this project. If you can finish
+faster, great! If not, limit yourself and don't spend much longer.</p>
+<p>You'll need to set <code>WWWUSER</code> and <code>WWWGROUP</code> env vars with your user id and
+group in order grant the correct permissions for the docker containers. Either:</p>
+<ul>
+<li>export them from your shell (inline or in your .*rc file):
+<code>export WWWUSER=$UID &amp;&amp; export WWWGROUP=$(id -g)</code> or</li>
+<li>run <code>docker-compose</code> this way:
+<code>WWWUSER=$UID WWWGROUP=$(id -g) docker-compose &lt;YOUR_SUBCOMMAND_HERE&gt;</code>.</li>
+</ul>
+<p>Right after <code>up</code>, the container <code>laravel.test</code> will error until you run
+<code>composer install</code> from inside of the container. This is part of the
+challenge. After you solve it, open <a href="http://localhost/">http://localhost/</a> in your browser.</p>
+<p><em>Hint</em>: set the option <code>--user=$WWWUSER</code> when installing.</p>
+<h2>Required steps for a valid solution</h2>
+<ol>
+<li>Create your own base branch, branch out from it by feature, and squash
+merge back into your base branch when you complete each feature</li>
+<li>Run the containers for the development environment using <code>docker-compose</code>.
+Running the stack on a non-dockerized environment is not a valid approach,
+but you can use <code>sail</code> to make your life easier</li>
+<li>Add Tailwind as a project dependency and use it on the views</li>
+<li>Write a migration to create ten (10) users with: first name, last name and
+email address. The migration should be able to rollback</li>
+<li>Write a seed to populate the users</li>
+<li>Write a view to display the users data from the database in a table. Fetch
+the data from <code>/users</code></li>
+<li>Write a JavaScript solution to sort the users table by any of the fields:
+you can use any library (React, Vue, etc), but you <strong>can't implement</strong> a
+pre-made package with this functionality (e.g.
+<a href="https://www.datatables.net/">DataTables</a>)</li>
+</ol>
+<h2>We'll take into consideration:</h2>
+<ul>
+<li><p>Your git commit history:</p>
+<p>The log of the repository should follow <a href="https://chris.beams.io/posts/git-commit/">this guideline</a>. Please read at
+least <a href="https://chris.beams.io/posts/git-commit/#seven-rules">The Seven Rules</a> listed in the article and apply them.</p>
+</li>
+</ul>
+<ul>
+<li>The quality of your code; keep it tidy, linted, and DRY:<ul>
+<li>Use <em>only</em> spaces for indentation (no tabs allowed): this repo contains an
+<a href="https://editorconfig.org/">editorconfig</a> file, please use it in your
+editor/IDE</li>
+<li><strong>HTML/Blade</strong>: indent the code with 2 spaces and avoid long lines in the
+code. You can set one HTML attribute per line (think React style for JSX)
+and split the values in multiple lines</li>
+<li><strong>JavaScript</strong>: use <a href="https://www.npmjs.com/package/eslint">eslint</a> with the config provided on this repo</li>
+<li><strong>PHP</strong>: follow the <a href="https://www.php-fig.org/psr/psr-12/">PSR-12</a> coding style. <a href="https://github.com/FriendsOfPhp/PHP-CS-Fixer">php-cs-fixer</a> can help
+you enforce this style</li>
+<li>Keep files and folders unrelated to the project out of the repo: .idea,
+*.swp, .vscode, .DS_Store, vendor, etc. <strong>should not</strong> be commited.
+Update <code>.gitignore</code> if necessary</li>
+</ul>
+</li>
+</ul>
+<h2>Nice to have</h2>
+<ul>
+<li>Anything else you would like to add</li>
+</ul>
+<h2>When you finish</h2>
+<p>Please send your solution as a zipped package to
+<a href="mailto:tech-challenge@orderbird.com"><a href="mailto:tech-challenge@orderbird.com">tech-challenge@orderbird.com</a></a>, <strong>including</strong> your <code>.git</code> folder.</p>
+</body>
+</html>
